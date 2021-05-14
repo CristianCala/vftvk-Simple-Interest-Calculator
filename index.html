@@ -1,16 +1,56 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Simple Interest Calculator</title>
+	</head>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+	<body >
+		<div class="center-div">
+			<div class="maindiv">
+				<h1>Simple Interest Calculator</h1>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+				<label class="margin-amount">Amount </label><input class="my"  id="principal">
+
+				<br>
+
+				<label class="value-rate">Interest Rate</label><input  class="slider" type="range" min="1" max="20" value="10.25"  id="rate" onchange="updateRate()" step="0.25"><span class="span-rate" id="rate_val">10.25 </span><b>%</b>
+
+				<br>
+
+				<label class="label-years" >No. of Years</label><select class="my years" id="years">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select> 
+
+				<!-- <br> -->
+				<!-- <label class="ml-1">Interest: </label> -->
+				<br>
+
+				<button onclick="compute()">Compute Interest</button>
+
+				<br>
+
+				<span class="result" id="result"></span>	
+
+				<footer>
+					<p class="div">
+						<strong>&#169;</strong>This Calculator belongs to --Cristian Cala--
+					</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</body>
 </html>
