@@ -19,12 +19,7 @@ function compute(){
 
 	var interest = principal * years * rate / 100;
 
-	if (principal == 0 ) {
-		alert("Enter a number that is not zero");
-		document.getElementById("principal").focus();
-		document.getElementById("principal").value = "";
-	}
-	else if (principal < 0){
+	if (principal <= 0 ) {
 		alert("Enter a positive number");
 		document.getElementById("principal").focus();
 		document.getElementById("principal").value = "";
